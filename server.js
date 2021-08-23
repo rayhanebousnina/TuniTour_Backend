@@ -2,7 +2,7 @@
 
 const express = require("express");
 const app = express();
-const db = require('./config/database');
+const db = require('./Config/database');
 db();
 
 app.use(express.json());
@@ -13,14 +13,16 @@ const cors = require('cors');
 // const bodyParser = require('body-parser');
 
 // Importing routes
-const dishes = require("./routes/dishesRoute")
+const cities = require("./Routes/CityRoute")
+const services = require("./Routes/ServiceRoute")
+const categories = require("./Routes/CategoryRoute")
 
 app.use(cors());
 // Create a simple route
 
-app.use('/home', dishes)
-
-
+app.use('/home', cities)
+app.use('/home', services)
+app.use('/home', categories)
 
 // Server connexion
 
