@@ -16,17 +16,23 @@ const cors = require('cors');
 const cities = require("./Routes/CityRoute")
 const services = require("./Routes/ServiceRoute")
 const categories = require("./Routes/CategoryRoute")
+const userRoutes = require("./Routes/UserRoute")
 
 app.use(cors());
-// Create a simple route
+// Create a simple routes [CRUD]
 
 app.use('/home', cities)
 app.use('/home', services)
 app.use('/home', categories)
 
+// Create a simple routes [Authentication]
+
+
+app.use('/api', userRoutes)  
+
 // Server connexion
 
-let PORT = 4000;
+let PORT = 5000;
 
 app.listen(PORT, (err) => {
     if (err) {
