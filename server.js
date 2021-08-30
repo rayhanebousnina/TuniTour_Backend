@@ -7,9 +7,10 @@ db();
 
 app.use(express.json());
 
-// Importing cors and body parser
-
+// Importing cors
 const cors = require('cors');
+
+// Importing body parser
 // const bodyParser = require('body-parser');
 
 // Importing routes
