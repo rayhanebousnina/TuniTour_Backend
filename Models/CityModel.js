@@ -7,7 +7,7 @@ const citySchema = new Schema({
   },
   cityImage: {
     type: String,
-    required: true,
+    // required: true,
   },
   cityDescription: {
     type: String,
@@ -16,7 +16,7 @@ const citySchema = new Schema({
   cityServices: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "service",
-    required: true,
+    // required: true,
   },
 });
 
