@@ -5,7 +5,10 @@ module.exports = {
     const serviceName = req.body.serviceName;
     const serviceImage = req.body.serviceImage;
     const serviceDescription = req.body.serviceDescription;
-    const serviceDetails = req.body.serviceDetails;
+    const serviceAddress = req.body.serviceAddress;
+    const serviceWorkingHours = req.body.serviceWorkingHours;
+    const servicePhone = req.body.servicePhone;
+    const servicePrice = req.body.servicePrice;
     const serviceLocation = req.body.serviceLocation;
     const serviceCategory = req.body.serviceCategory;
 
@@ -14,7 +17,10 @@ module.exports = {
         serviceName,
         serviceImage,
         serviceDescription,
-        serviceDetails,
+        serviceAddress,
+        serviceWorkingHours,
+        servicePhone,
+        servicePrice,
         serviceLocation,
         serviceCategory,
       });
