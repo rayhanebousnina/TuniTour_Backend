@@ -4,6 +4,7 @@ const service = require("../Controllers/ServiceController");
 
 /* @GET URL */
 router.get("/allservices", service.getService);
+router.get("/allservices_by_id/:id", service.getCurrentService);
 
 /* @POST URL */
 router.post("/addService", service.addService);

@@ -32,7 +32,7 @@ app.use("/api", userRoutes);
 
 // Server connexion
 
-let PORT = 2000;
+let PORT = 4000;
 
 app.listen(PORT, (err) => {
   if (err) {
