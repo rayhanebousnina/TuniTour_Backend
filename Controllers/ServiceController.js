@@ -55,21 +55,6 @@ module.exports = {
     });
   },
 
-  getCurrentService: async (req, res) => {
-    var id = req.params.id;
-    Service.findOne({ _id: id }, function (err, service) {
-      if (err) {
-        return res
-          .status(500)
-          .json({ message: "Error when getting service.", error: err });
-      }
-      if (!service) {
-        return res.status(404).json({ message: "No such service" });
-      }
-      return res.json(service);
-    });
-  },
-
   deleteService: async (req, res) => {
     try {
       const service = await Service.findByIdAndDelete(req.params.id);
