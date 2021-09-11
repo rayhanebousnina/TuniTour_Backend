@@ -45,17 +45,17 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-userSchema.virtual("password").set(function (password) {
-  this.hash_password = bcrypt.hashSync(password, 10);
-});
+// userSchema.virtual("password").set(function (password) {
+//   this.hash_password = bcrypt.hashSync(password, 10);
+// });
 
-userSchema.virtual("fullName").get(function () {
-  return `${this.firstName} ${this.lastName}`;
-});
+// userSchema.virtual("fullName").get(function () {
+//   return `${this.firstName} ${this.lastName}`;
+// });
 
-userSchema.methods = {
-  authenticate: async function (password) {
-    return await bcrypt.compare(password, this.hash_password);
-  },
-};
+// userSchema.methods = {
+//   authenticate: async function (password) {
+//     return await bcrypt.compare(password, this.hash_password);
+//   },
+// };
 module.exports = user = mongoose.model("user", userSchema);
