@@ -2,7 +2,7 @@ const User = require("../Models/UserModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 exports.signup = (req, res) => {
-  User.findOne({ email: req.body.email }).exec((error, user) => {
+  User.findOne({ email: req.body.email }).exec(async (error, user) => {
     if (user)
       return res.status(400).json({
         message: "User already registered",
@@ -24,9 +24,9 @@ exports.signup = (req, res) => {
       lastName,
       email,
       birthDate,
+      hash_password,
       contactNumber,
       profilePicture,
-      hash_password,
     });
 
     _user.save((error, data) => {
