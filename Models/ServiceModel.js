@@ -30,13 +30,11 @@ const serviceSchema = new Schema({
     required: true,
   },
   serviceLocation: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "city",
+    type: String,
     required: true,
   },
   serviceCategory: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "category",
+    type: String,
     required: true,
   },
 });
